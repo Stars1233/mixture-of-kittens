@@ -2,7 +2,7 @@
 
 Mixture-of-Kittens (MoK) is a fully deterministic mixture-of-experts (MoE) training megakernel built from first principles for NVL72s. MoK fuses all MoE computation and communication into a single kernel, overlapping compute and inter-GPU networking at configurable granularity, and fully eliminates CPU-GPU synchronization. It supports BF16 and MXFP8, covers both forward and backward passes, and powers production training of Composer at Cursor.
 
-For a deep dive, read our [blog post](https://cursor.com/blog/mixture-of-kittens).
+For a deep dive, read our [paper](https://arxiv.org/abs/2609.36070) and [blog post](https://cursor.com/blog/mixture-of-kittens).
 
 ## Performance
 
@@ -12,7 +12,7 @@ We evaluated MoK at two levels: standalone MoE layers, with all benchmark code a
 
 Compared with the fastest baseline, MoK is up to 2.37x faster for the MXFP8 forward, 1.78x for the MXFP8 backward, 1.92x for the BF16 forward, and 1.58x for the BF16 backward.
 
-See our [blog post](https://cursor.com/blog/mixture-of-kittens) for the methodology and full results.
+See our [paper](https://arxiv.org/abs/2609.36070) and [blog post](https://cursor.com/blog/mixture-of-kittens) for the methodology and full results.
 
 ## Setup
 
@@ -263,18 +263,18 @@ Mixture-of-Kittens is released under the Apache 2.0 License. See [`LICENSE`](LIC
 If you use this work, please cite:
 
 ```
-Stuart H. Sul, Nash Brown, Henry Wildermuth, William Lin, and Federico Cassano. "Mixture-of-Kittens: MoE Megakernel for NVL72s." Cursor Research, Aug 2026. https://github.com/cursor/mixture-of-kittens
+Stuart H. Sul, Nash Brown, Henry Wildermuth, William Lin, Federico Cassano, and Christopher Ré. "Mixture-of-Kittens: MoE Megakernel for NVL72s." arXiv preprint arXiv:2609.36070, Sep 2026. https://arxiv.org/abs/2609.36070
 ```
 
 Or in BibTeX:
 
 ```bibtex
 @misc{sul2026mok,
-  title        = {Mixture-of-Kittens: {MoE} Megakernel for {NVL72s}},
-  author       = {Stuart H. Sul and Nash Brown and Henry Wildermuth and William Lin and Federico Cassano},
-  organization = {Cursor Research},
-  year         = {2026},
-  publisher    = {GitHub},
-  howpublished = {\url{https://github.com/cursor/mixture-of-kittens}},
+  title   = {Mixture-of-Kittens: {MoE} Megakernel for {NVL72s}},
+  author  = {Stuart H. Sul and Nash Brown and Henry Wildermuth and William Lin and Federico Cassano and Christopher Ré},
+  year    = {2026},
+  month   = sep,
+  journal = {arXiv preprint arXiv:2609.36070},
+  url     = {https://arxiv.org/abs/2609.36070},
 }
 ```
